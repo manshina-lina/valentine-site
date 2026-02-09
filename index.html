@@ -17,12 +17,6 @@
 
         <!-- Вопрос -->
         <h1 id="question" style="color: #ff1493;">Will you be my Valentine on February 14, 2026?</h1>
-        
-        <!-- Поле для кастомизации вопроса -->
-        <div class="customize-section">
-            <input type="text" id="questionInput" placeholder="Измените вопрос..." value="Will you be my Valentine on February 14, 2026?">
-            <button onclick="updateQuestion()">Обновить</button>
-        </div>
 
         <!-- Кнопки -->
         <div class="buttons-container">
@@ -34,38 +28,10 @@
         <div id="successMessage" class="success-message" style="display: none;">
             <div class="message-content">
                 <h2>🎉 Ура!</h2>
-                <p id="customMessage"></p>
+                <p id="customMessage">Люблю тебя, котёночек 💕</p>
                 <button onclick="resetPage()">Начать заново</button>
             </div>
         </div>
-    </div>
-
-    <!-- Панель кастомизации -->
-    <div class="customization-panel">
-        <h3>⚙️ Кастомизация</h3>
-        
-        <label>
-            Сообщение при "Да":
-            <textarea id="messageInput" placeholder="Введите ваше сообщение...">Люблю тебя, котёночек 💕</textarea>
-        </label>
-
-        <label>
-            Цвет фона (основной):
-            <input type="color" id="bgColor" value="#ffc0e0">
-        </label>
-
-        <label>
-            Цвет фона (текст):
-            <input type="color" id="textColor" value="#ff1493">
-        </label>
-
-        <label>
-            Размер шрифта вопроса (px):
-            <input type="number" id="fontSize" value="48" min="20" max="80">
-        </label>
-
-        <button onclick="applyCustomization()">Применить</button>
-        <button onclick="resetCustomization()">Сбросить</button>
     </div>
 
     <script src="script.js"></script>
