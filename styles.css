@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0 0%, #ffb3d9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Фотография */
+.photo-container {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #ff1493;
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#photo:hover {
+    transform: scale(1.05);
+}
+
+.btn-edit-photo {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit-photo:hover {
+    background: #ff0080;
+}
+
+/* Вопрос */
+#question {
+    color: #ff1493;
+    margin-bottom: 30px;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Кастомизация вопр  са */
+.customize-section {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.customize-section input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff1493;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.customize-section button {
+    padding: 10px 20px;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.customize-section button:hover {
+    background: #ff0080;
+}
+
+/* Кнопки */
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+    color: white;
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+}
+
+.yes-btn:active {
+    transform: scale(0.98);
+}
+
+.no-btn {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    color: white;
+    position: relative;
+}
+
+/* Сообщение успеха */
+.success-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.message-content {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.message-content h2 {
+    color: #ff1493;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.message-content p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.message-content button {
+    padding: 12px 30px;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.message-content button:hover {
+    background: #ff0080;
+}
+
+/* Панель кастомизации */
+.customization-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    padding*

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Фотография -->
+        <div class="photo-container">
+            <img id="photo" src="https://via.placeholder.com/300?text=Your+Photo" alt="Valentine Photo">
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+            <button class="btn-edit-photo" onclick="document.getElementById('photoInput').click()">📷 Изменить фото</button>
+        </div>
+
+        <!-- Вопрос -->
+        <h1 id="question">Will you be my Valentine?</h1>
+        
+        <!-- Поле для кастомизации вопроса -->
+        <div class="customize-section">
+            <input type="text" id="questionInput" placeholder="Измените вопрос..." value="Will you be my Valentine?">
+            <button onclick="updateQuestion()">Обновить</button>
+        </div>
+
+        <!-- Кнопки -->
+        <div class="buttons-container">
+            <button class="btn yes-btn" onclick="handleYes()">Да ❤️</button>
+            <button class="btn no-btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">Нет 💔</button>
+        </div>
+
+        <!-- Сообщение после нажатия "Да" -->
+        <div id="successMessage" class="success-message" style="display: none;">
+            <div class="message-content">
+                <h2>🎉 Ура!</h2>
+                <p id="customMessage"></p>
+                <button onclick="resetPage()">Начать заново</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Панель кастомизации -->
+    <div class="customization-panel">
+        <h3>⚙️ Кастомизация</h3>
+        
+        <label>
+            Сообщение при "Да":
+            <textarea id="messageInput" placeholder="Введите ваше сообщение...">Спасибо! Ты самая лучшая! 💕</textarea>
+        </label>
+
+        <label>
+            Цвет фона (основной):
+            <input type="color" id="bgColor" value="#ffe6f0">
+        </label>
+
+        <label>
+            Цвет фона (текст):
+            <input type="color" id="textColor" value="#ff1493">
+        </label>
+
+        <label>
+            Размер шрифта вопроса (px):
+            <input type="number" id="fontSize" value="48" min="20" max="80">
+        </label>
+
+        <button onclick="applyCustomization()">Применить</button>
+        <button onclick="resetCustomization()">Сбросить</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
